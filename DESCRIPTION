@@ -5,6 +5,7 @@ Version: 0.1
 Date: 2017-08-03
 Authors@R: person("AbdulMajedRaja", "R", email = "amrrs.data@gmail.com", role = c("aut", "cre"))
 Description: An R Package to access iTunes App Store Ratings and Reviews for iOS App Developers to access the App Reviews submitted by their App users, Since Apple Store does not provide this straightforward. 
+URL: http://github.com/amrrs/itunesr
 License: CC0
 LazyData: TRUE
 Imports: jsonlite,
