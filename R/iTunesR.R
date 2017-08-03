@@ -38,13 +38,13 @@ extract_reviews <- function(app_id,country,page_num){
         xml_n <- xml2::read_xml(xml_url)
 
 
-        entries <- xml2::xml_children(xml_n)[xml_name(xml_children(xml_n))=='entry']
+        entries <- xml2::xml_children(xml_n)[xml2::xml_name(xml2::xml_children(xml_n))=='entry']
 
         entries <- entries[-1]
 
         #extrcting date from entries
 
-        date <- xml2::xml_text(xml_children(entries))[xml_name(xml_children(entries))=='updated']
+        date <- xml2::xml_text(xml2::xml_children(entries))[xml2::xml_name(xml2::xml_children(entries))=='updated']
 
         reviews$Date <- lubridate::with_tz(strptime(date,format='%Y-%m-%dT%H:%M:%S',tz='America/Los_Angeles'),tzone='Europe/London')
 
