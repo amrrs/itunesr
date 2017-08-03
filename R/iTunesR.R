@@ -96,7 +96,7 @@ getAttributes <- function(app_id,country){
   
   json_url <- paste0('http://itunes.apple.com/gb/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
   
-  js <- fromJSON(json_url)
+  js <- jsonlite::fromJSON(json_url)
   
   app_attributes <- data.frame(t(c(js$feed$entry$`im:name`$label[1],js$feed$entry$`im:artist`$label[1],js$feed$entry$id$attributes$`im:bundleId`[1],js$feed$entry$id$label[1],js$feed$entry$category$attributes$label[1])))
   
