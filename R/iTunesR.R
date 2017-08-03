@@ -11,7 +11,7 @@
 
 #' @export
 
-extract_reviews <- function(app_id,country,page_num){
+getReviews <- function(app_id,country,page_num){
 
 
 
@@ -57,10 +57,26 @@ extract_reviews <- function(app_id,country,page_num){
 }
 
 
-#reviews1 <- extract_reviews(app_id,1)
-#reviews2 <- extract_reviews(app_id,2)
-#reviews3 <- extract_reviews(app_id,3)
-#reviews4 <- extract_reviews(app_id,4)
+#' @param app_id A number Your iOS App ID for which reviews need to be downloaded
+#' @param country A string country code like 'in' 'gb' for which reviews need to be downloaded
+#' @return A Data frame of Reviews and meta information
+#' @examples
+#' getLogo(742044692,'in')
 
-#reviews <- rbind(reviews1,reviews2,reviews3,reviews4)
+
+#' @export
+
+getLogo <- function(app_id,country){
+  
+  page_num = 1
+  
+  json_url <- paste0('http://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
+  
+  js <- jsonlite::fromJSON(json_url)
+  
+  download.file(js$feed$entry$`im:image`[[1]]$label[3],paste0(app_id,'_logo.png'),mode='wb')  
+
+}
+
+
 
