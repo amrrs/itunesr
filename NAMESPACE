@@ -2,3 +2,4 @@
 
 export(getReviews)
 export(getLogo)
+export(getAttributes)
