@@ -8,7 +8,6 @@
 #' getReviews(742044692,'in',1)
 
 
-
 #' @export
 
 getReviews <- function(app_id,country,page_num){
