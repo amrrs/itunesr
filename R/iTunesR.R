@@ -56,10 +56,11 @@ getReviews <- function(app_id,country,page_num){
 
 }
 
-
+#' Download App Logo from iTunes App Store
+#'
 #' @param app_id A number Your iOS App ID for which reviews need to be downloaded
 #' @param country A string country code like 'in' 'gb' for which reviews need to be downloaded
-#' @return downloads and saves App Logo in the current working directory 
+#' @return downloads and saves App Logo in the current working directory
 #' @examples
 #' getLogo(742044692,'in')
 
@@ -67,18 +68,19 @@ getReviews <- function(app_id,country,page_num){
 #' @export
 
 getLogo <- function(app_id,country){
-  
+
   page_num = 1
-  
+
   json_url <- paste0('http://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
-  
+
   js <- jsonlite::fromJSON(json_url)
-  
-  download.file(js$feed$entry$`im:image`[[1]]$label[3],paste0(app_id,'_logo.png'),mode='wb')  
+
+  download.file(js$feed$entry$`im:image`[[1]]$label[3],paste0(app_id,'_logo.png'),mode='wb')
 
 }
 
-
+#' Get Basic App Attributes from iTunes App Store
+#'
 #' @param app_id A number Your iOS App ID for which reviews need to be downloaded
 #' @param country A string country code like 'in' 'gb' for which reviews need to be downloaded
 #' @return A Data frame of App Attributes containing Title, Developer, Package Name, URL, Category
@@ -91,17 +93,17 @@ getLogo <- function(app_id,country){
 
 
 getAttributes <- function(app_id,country){
-  
+
   page_num = 1
-  
+
   json_url <- paste0('http://itunes.apple.com/gb/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
-  
+
   js <- jsonlite::fromJSON(json_url)
-  
+
   app_attributes <- data.frame(t(c(js$feed$entry$`im:name`$label[1],js$feed$entry$`im:artist`$label[1],js$feed$entry$id$attributes$`im:bundleId`[1],js$feed$entry$id$label[1],js$feed$entry$category$attributes$label[1])))
-  
+
   colnames(app_attributes) <- c('Title','Developer','Package','URL','Category')
-  
+
   return(app_attributes)
-  
+
 }
