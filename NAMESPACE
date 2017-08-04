@@ -3,3 +3,4 @@
 export(getAttributes)
 export(getLogo)
 export(getReviews)
+importFrom("utils", "download.file")
