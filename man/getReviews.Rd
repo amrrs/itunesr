@@ -20,5 +20,5 @@ A Data frame of Reviews and meta information
 Extract Reviews from iTunes App Store
 }
 \examples{
-extract_reviews(742044692,'in',1)
+getReviews(742044692,'in',1)
 }
