@@ -88,6 +88,7 @@ getLogo <- function(app_id,country){
 
 
 #' @export
+#' @importFrom utils download.file
 
 
 
