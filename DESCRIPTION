@@ -1,10 +1,10 @@
 Package: itunesr
 Type: Package
-Title: R Package to access iTunes App Store Ratings and Reviews
+Title: To access iTunes App Store Ratings and Reviews using R
 Version: 0.1
 Date: 2017-08-03
 Authors@R: person("AbdulMajedRaja", "R", email = "amrrs.data@gmail.com", role = c("aut", "cre"))
-Description: An R Package to access iTunes App Store Ratings and Reviews for iOS App Developers to access the App Reviews submitted by their App users, Since Apple Store does not provide this straightforward. 
+Description: To enable 'iOS' App Developers to access iTunes App Store Ratings and Reviews using R to extract Basic App Information and Reviews submitted by their App users, Since Apple Store does not provide this straightforward. 
 URL: http://github.com/amrrs/itunesr
 License: CC0
 LazyData: TRUE
