@@ -1,3 +1,6 @@
+## Resubmission
+This is a resubmission. In this version I have updated the Description to remove redundancy in the words as suggested.
+
 ## Test environments
 
 * Local OS X install: R 3.4.0
