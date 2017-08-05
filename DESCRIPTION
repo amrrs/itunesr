@@ -1,6 +1,6 @@
 Package: itunesr
 Type: Package
-Title: To access iTunes App Store Ratings and Reviews using R
+Title: To Access iTunes App Store Ratings and Reviews using R
 Version: 0.1
 Date: 2017-08-03
 Authors@R: person("AbdulMajedRaja", "R", email = "amrrs.data@gmail.com", role = c("aut", "cre"))
