@@ -1,11 +1,6 @@
 ## Resubmission
-<<<<<<< HEAD
 
 This is a resubmission. In this version I have updated the DESCRIPTION to remove redundancy in the words as suggested.
-
-=======
-This is a resubmission. In this version I have updated the Description to remove redundancy in the words as suggested.
->>>>>>> ad820fc82b9e2e565ab563b6d1443a5d942b5ad6
 
 ## Test environments
 
