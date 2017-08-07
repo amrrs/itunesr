@@ -38,7 +38,7 @@ getAttributes(742044692,'in')
 
 Examples
 ---------------
-## Code 
+### Code 
 ```r
 library(itunesr)
 
@@ -53,7 +53,7 @@ table(uber_reviews$Rating)
 ```
 
 
-## Output
+### Output
 ``` r
 > library(itunesr)
 > 
