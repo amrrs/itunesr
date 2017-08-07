@@ -17,11 +17,59 @@ install.packages("itunesr")
 devtools::install_github("amrrs/itunesr")
 ```
 
+Dependency Packages
+------------
+
+* jsonlite
+* xml2
+* lubridate
+* curl
+
 Getting started
 ---------------
 
 ``` r
 library(itunesr)
+getReviews(368677368,'us',1)
 getAttributes(742044692,'in')
 ```
+```itunesr``` can be loaded just like any other R-package with ```library(itunesr)```.
+
+
+Examples
+---------------
+## Code 
+```r
+library(itunesr)
+
+#Latest (Page 1) Uber Reviews for the Country: US
+uber_reviews <- getReviews(368677368,'us',1)
+
+#Displaying the column names 
+names(uber_reviews)
+
+#Ratings count from the 50 Reviews
+table(uber_reviews$Rating)
+```
+
+
+## Output
+``` r
+> library(itunesr)
+> 
+> #Latest (Page 1) Uber Reviews for Country: US
+> uber_reviews <- getReviews(368677368,'us',1)
+> 
+> #Displaying the column names 
+> names(uber_reviews)
+[1] "Title"       "Author_URL"  "Author_Name" "App_Version" "Rating"     
+[6] "Review"      "Date"       
+> 
+> #Ratings count from the 50 Reviews
+> table(uber_reviews$Rating)
+
+ 1  2  3  4  5 
+40  2  1  1  6 
+```
+
 
