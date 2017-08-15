@@ -1,5 +1,5 @@
 # itunesr
-[![Build Status](https://travis-ci.org/amrrs/itunesr.svg?branch=master)](https://travis-ci.org/amrrs/itunesr) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/itunesr)](https://cran.r-project.org/package=itunesr)
+[![Build Status](https://travis-ci.org/amrrs/itunesr.svg?branch=master)](https://travis-ci.org/amrrs/itunesr) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/itunesr)](https://cran.r-project.org/package=itunesr) [![DOWNLOADSTOTAL](https://cranlogs.r-pkg.org/badges/grand-total/itunesr)](https://cranlogs.r-pkg.org/badges/grand-total/itunesr)
 
 Overview
 --------
