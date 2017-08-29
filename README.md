@@ -35,6 +35,9 @@ getAttributes(742044692,'in')
 ```
 ```itunesr``` can be loaded just like any other R-package with ```library(itunesr)```.
 
+**Note:** If you're trying this behind a Firewall, you might get:
+```Error in open.connection(con, "rb") : Timeout was reached```
+To resolve this error, Please refer this link: [Configuring R to Use an HTTP or HTTPS Proxy](https://support.rstudio.com/hc/en-us/articles/200488488-Configuring-R-to-Use-an-HTTP-or-HTTPS-Proxy)
 
 Examples
 ---------------
