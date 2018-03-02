@@ -34,18 +34,20 @@ getReviews <- function(app_id,country,page_num){
 
         #xml_url <- 'http://itunes.apple.com/gb/rss/customerreviews/id=370901726/sortBy=mostRecent/xml'
 
-        xml_n <- xml2::read_xml(xml_url)
+        #xml_n <- xml2::read_xml(xml_url)
 
 
-        entries <- xml2::xml_children(xml_n)[xml2::xml_name(xml2::xml_children(xml_n))=='entry']
+        #entries <- xml2::xml_children(xml_n)[xml2::xml_name(xml2::xml_children(xml_n))=='entry']
 
-        entries <- entries[-1]
+        #entries <- entries[-1]
 
         #extrcting date from entries
 
-        date <- xml2::xml_text(xml2::xml_children(entries))[xml2::xml_name(xml2::xml_children(entries))=='updated']
+        #temporary fix as Apple seems to have removed the XML endpoint
 
-        reviews$Date <- lubridate::with_tz(strptime(date,format='%Y-%m-%dT%H:%M:%S',tz='America/Los_Angeles'),tzone='Europe/London')
+        #date <- xml2::xml_text(xml2::xml_children(entries))[xml2::xml_name(xml2::xml_children(entries))=='updated']
+
+        #reviews$Date <- lubridate::with_tz(strptime(date,format='%Y-%m-%dT%H:%M:%S',tz='America/Los_Angeles'),tzone='Europe/London')
 
         #re-arraning column order
 
