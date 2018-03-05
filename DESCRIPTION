@@ -12,5 +12,6 @@ Imports: jsonlite,
     xml2,
     lubridate,
     curl
-Suggests: testthat
+Suggests: testthat,
+    covr
 RoxygenNote: 6.0.1
