@@ -1,6 +1,6 @@
 ## Resubmission
 
-This is a resubmission. In this version I have updated the DESCRIPTION to remove redundancy in the words as suggested.
+This is a new version resubmission. In this version, A bug that was causing the code to fail has been fixed
 
 ## Test environments
 
