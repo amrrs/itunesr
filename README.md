@@ -3,7 +3,7 @@
 
 Overview
 --------
-The goal of itunesr is to help iOS App Developers access iTunes App Store Ratings and Reviews programmatically, since iTunes Connect doesn't provide this data straightforward.
+The goal of `itunesr` is to help iOS App Developers access iTunes App Store Ratings and Reviews programmatically, since iTunes Connect doesn't provide this data straightforward.
 
 Installation
 ------------
