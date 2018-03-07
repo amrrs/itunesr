@@ -58,21 +58,17 @@ table(uber_reviews$Rating)
 
 ### Output
 ``` r
-> library(itunesr)
-> 
+> library('itunesr')
 > #Latest (Page 1) Uber Reviews for Country: US
 > uber_reviews <- getReviews(368677368,'us',1)
-> 
-> #Displaying the column names 
+> #Displaying the column names
 > names(uber_reviews)
-[1] "Title"       "Author_URL"  "Author_Name" "App_Version" "Rating"     
-[6] "Review"      "Date"       
-> 
+[1] "Title"       "Author_URL"  "Author_Name" "App_Version" "Rating"      "Review"     
 > #Ratings count from the 50 Reviews
 > table(uber_reviews$Rating)
 
  1  2  3  4  5 
-40  2  1  1  6 
+19  3  7  4 17 
 ```
 
 
