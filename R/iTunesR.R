@@ -32,7 +32,7 @@ getReviews <- function(app_id,country,page_num){
 
         #reading xml for date
 
-        xml_url <- 'http://itunes.apple.com/gb/rss/customerreviews/id=370901726/sortBy=mostRecent/xml'
+         
 
         xml_n <- xml2::read_xml(xml_url)
 
