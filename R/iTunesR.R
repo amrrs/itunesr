@@ -17,9 +17,9 @@ getReviews <- function(app_id,country,page_num){
         #building_url
 
 
-        json_url <- paste0('http://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
+        json_url <- paste0('https://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
 
-        xml_url <- paste0('http://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','xml')
+        xml_url <- paste0('https://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','xml')
 
 
         js <- jsonlite::fromJSON(json_url)
@@ -72,7 +72,7 @@ getLogo <- function(app_id,country){
 
   page_num = 1
 
-  json_url <- paste0('http://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
+  json_url <- paste0('https://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
 
   js <- jsonlite::fromJSON(json_url)
 
@@ -98,7 +98,7 @@ getAttributes <- function(app_id,country){
 
   page_num = 1
 
-  json_url <- paste0('http://itunes.apple.com/gb/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
+  json_url <- paste0('https://itunes.apple.com/gb/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
 
   js <- jsonlite::fromJSON(json_url)
 
