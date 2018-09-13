@@ -17,14 +17,33 @@ getReviews <- function(app_id,country,page_num){
         #building_url
 
 
-        json_url <- paste0('https://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','json')
+        json_url <- paste0('https://itunes.apple.com/',
+                           country,
+                           '/rss/customerreviews/page=',
+                           page_num,
+                           '/id=',
+                           app_id,
+                           '/sortby=mostrecent/',
+                           'json')
 
-        xml_url <- paste0('https://itunes.apple.com/',country,'/rss/customerreviews/page=',page_num,'/id=',app_id,'/sortby=mostrecent/','xml')
+        xml_url <- paste0('https://itunes.apple.com/',
+                          country,
+                          '/rss/customerreviews/page=',
+                          page_num,
+                          '/id=',
+                          app_id,
+                          '/sortby=mostrecent/',
+                          'xml')
 
 
         js <- jsonlite::fromJSON(json_url)
 
-        reviews <- cbind(Title = js$feed$entry$title$label,Author_URL = js$feed$entry$author$uri,Author_Name = js$feed$entry$author$name,App_Version = js$feed$entry$`im:version`$label,Rating = js$feed$entry$`im:rating`$label,Review = js$feed$entry$content$label)
+        reviews <- cbind(Title = js$feed$entry$title$label,
+                         Author_URL = js$feed$entry$author$uri,
+                         Author_Name = js$feed$entry$author$name,
+                         App_Version = js$feed$entry$`im:version`$label,
+                         Rating = js$feed$entry$`im:rating`$label,
+                         Review = js$feed$entry$content$label)
 
         reviews <- reviews[-1,]
 
@@ -43,13 +62,15 @@ getReviews <- function(app_id,country,page_num){
 
         #extrcting date from entries
 
-        #temporary fix as Apple seems to have removed the XML endpoint
-
-        date <- xml2::xml_text(xml2::xml_children(entries))[xml2::xml_name(xml2::xml_children(entries))=='updated']
+        date <- xml2::xml_text(
+          xml2::xml_children(entries))[xml2::xml_name(xml2::xml_children(entries))=='updated']
 
         # POSIXct conversion to make it work with dplyr
 
-        reviews$Date <- as.POSIXct(lubridate::with_tz(strptime(date,format='%Y-%m-%dT%H:%M:%S',tz='America/Los_Angeles'),tzone='Europe/London'))
+        reviews$Date <- as.POSIXct(
+                        lubridate::with_tz(
+                        strptime(date,format='%Y-%m-%dT%H:%M:%S',tz='America/Los_Angeles'),
+                                tzone='Europe/London'))
 
         #re-arraning column order
 
