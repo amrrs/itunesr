@@ -65,7 +65,7 @@ table(uber_reviews$Rating)
 > uber_reviews <- getReviews(368677368,'us',1)
 > #Displaying the column names
 > names(uber_reviews)
-[1] "Title"       "Author_URL"  "Author_Name" "App_Version" "Rating"      "Review"     
+[1] "Title"       "Author_URL"  "Author_Name" "App_Version" "Rating"      "Review"      "Date"       
 > #Ratings count from the 50 Reviews
 > table(uber_reviews$Rating)
 
@@ -73,4 +73,20 @@ table(uber_reviews$Rating)
 19  3  7  4 17 
 ```
 
+### Using itunesr output with Tidyverse
+
+``` r
+> amazon_reviews <- getReviews("297606951","us",1)
+> library(tidyverse)
+> amazon_reviews %>% count(Rating)
+# A tibble: 5 x 2
+  Rating     n
+  <fct>  <int>
+1 1         25
+2 2          8
+3 3          9
+4 4          4
+5 5          4
+
+```
 
