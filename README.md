@@ -1,5 +1,7 @@
 # itunesr
-[![Build Status](https://travis-ci.org/amrrs/itunesr.svg?branch=master)](https://travis-ci.org/amrrs/itunesr) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/itunesr)](https://cran.r-project.org/package=itunesr) [![DOWNLOADSTOTAL](https://cranlogs.r-pkg.org/badges/grand-total/itunesr)](https://cranlogs.r-pkg.org/badges/grand-total/itunesr) [![Coverage Status](https://img.shields.io/codecov/c/github/amrrs/itunesr/master.svg)](https://codecov.io/github/amrrs/itunesr?branch=master)
+[![Build Status](https://travis-ci.org/amrrs/itunesr.svg?branch=master)](https://travis-ci.org/amrrs/itunesr) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/itunesr)](https://cran.r-project.org/package=itunesr) [![DOWNLOADSTOTAL](https://cranlogs.r-pkg.org/badges/grand-total/itunesr)](https://cranlogs.r-pkg.org/badges/grand-total/itunesr) [![Coverage Status](https://img.shields.io/codecov/c/github/amrrs/itunesr/master.svg)](https://codecov.io/github/amrrs/itunesr?branch=master) 
+[![Rdoc](http://www.rdocumentation.org/badges/version/itunesr)](http://www.rdocumentation.org/packages/itunesr)
+
 
 Overview
 --------
