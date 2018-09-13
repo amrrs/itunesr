@@ -32,7 +32,7 @@ getReviews <- function(app_id,country,page_num){
 
         #reading xml for date
 
-         
+
 
         xml_n <- xml2::read_xml(xml_url)
 
@@ -52,6 +52,10 @@ getReviews <- function(app_id,country,page_num){
         #re-arraning column order
 
         #reviews <- reviews[,c(7,4,5,1,6,3,2)]
+
+        #to fix the rownumber/rownames issue
+
+        rownames(reviews) <- NULL
 
         return(reviews)
 
