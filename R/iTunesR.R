@@ -47,13 +47,21 @@ getReviews <- function(app_id,country,page_num){
 
         date <- xml2::xml_text(xml2::xml_children(entries))[xml2::xml_name(xml2::xml_children(entries))=='updated']
 
-        reviews$Date <- lubridate::with_tz(strptime(date,format='%Y-%m-%dT%H:%M:%S',tz='America/Los_Angeles'),tzone='Europe/London')
+        # POSIXct conversion to make it work with dplyr
+
+        reviews$Date <- as.POSIXct(lubridate::with_tz(strptime(date,format='%Y-%m-%dT%H:%M:%S',tz='America/Los_Angeles'),tzone='Europe/London'))
 
         #re-arraning column order
 
         #reviews <- reviews[,c(7,4,5,1,6,3,2)]
 
         #to fix the rownumber/rownames issue
+
+        # Formatting
+
+        reviews$Title <- as.character(reviews$Title)
+
+        reviews$Review <- as.character(reviews$Review)
 
         rownames(reviews) <- NULL
 
