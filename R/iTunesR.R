@@ -95,11 +95,8 @@ getReviews <- function(app_id,country,page_num){
 #' @param app_id A number Your iOS App ID for which reviews need to be downloaded
 #' @param country A string country code like 'in' 'gb' for which reviews need to be downloaded
 #' @return downloads and saves App Logo in the current working directory
-#' @examples
-#' getLogo(742044692,'in')
 
 
-#' @export
 
 getLogo <- function(app_id,country){
 
@@ -118,11 +115,9 @@ getLogo <- function(app_id,country){
 #' @param app_id A number Your iOS App ID for which reviews need to be downloaded
 #' @param country A string country code like 'in' 'gb' for which reviews need to be downloaded
 #' @return A Data frame of App Attributes containing Title, Developer, Package Name, URL, Category
-#' @examples
-#' getAttributes(742044692,'in')
 
 
-#' @export
+
 #' @importFrom utils download.file
 
 

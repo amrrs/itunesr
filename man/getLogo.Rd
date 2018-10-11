@@ -17,6 +17,3 @@ downloads and saves App Logo in the current working directory
 \description{
 Download App Logo from iTunes App Store
 }
-\examples{
-getLogo(742044692,'in')
-}

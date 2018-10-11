@@ -17,6 +17,3 @@ A Data frame of App Attributes containing Title, Developer, Package Name, URL, C
 \description{
 Get Basic App Attributes from iTunes App Store
 }
-\examples{
-getAttributes(742044692,'in')
-}

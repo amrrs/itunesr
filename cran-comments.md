@@ -1,6 +1,6 @@
 ## Resubmission
 
-This is a new version submission. In this version, output formatting has been done and the earlier bug from Apple has been reverted back to original.
+This is a new version submission. In this version, two functions have to be taken offline again due to wierd change by Apple.
 
 ## Test environments
 
