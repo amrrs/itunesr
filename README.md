@@ -33,7 +33,6 @@ Getting started
 ``` r
 library(itunesr)
 getReviews(368677368,'us',1)
-getAttributes(742044692,'in')
 ```
 ```itunesr``` can be loaded just like any other R-package with ```library(itunesr)```.
 
